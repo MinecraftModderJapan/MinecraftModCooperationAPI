@@ -7,8 +7,8 @@
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authors": ["CrafterKina"],
-  "credits": "MinecraftModderJapan",
+  "authorList": ["MinecraftModderJapan"],
+  "credits": "MinecraftModderJapan organization member and the Contributors",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
