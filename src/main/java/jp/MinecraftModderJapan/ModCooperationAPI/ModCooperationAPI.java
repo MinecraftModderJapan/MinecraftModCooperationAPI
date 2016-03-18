@@ -1,6 +1,6 @@
 package jp.MinecraftModderJapan.ModCooperationAPI;
 
-import cpw.mods.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod;
 
 @Mod(modid = ModCooperationAPI.MOD_ID)
 public class ModCooperationAPI{

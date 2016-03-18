@@ -2,6 +2,7 @@ package jp.MinecraftModderJapan.ModCooperationAPI.api.block;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 
 import java.util.Random;
@@ -12,7 +13,7 @@ import java.util.Random;
  * Crop interface.
  *
  * @author CrafterKina
- * @version 1.0
+ * @version 1.1
  * @since 1.0
  */
 public interface ICrop{
@@ -26,15 +27,13 @@ public interface ICrop{
      *         Nonnull
      *         <p/>
      *         the World
-     * @param x
-     *         X
-     * @param y
-     *         Y
-     * @param z
-     *         Z
+     * @param pos
+     *         Nonnull
+     *         <p/>
+     *         position
      * @since 1.0
      */
-    boolean isMature(World world, int x, int y, int z);
+    boolean isMature(World world, BlockPos pos);
 
     /**
      * 作物から何らかの収穫が得られるときは、trueを返します。
@@ -45,15 +44,13 @@ public interface ICrop{
      *         Nonnull
      *         <p/>
      *         the World
-     * @param x
-     *         X
-     * @param y
-     *         Y
-     * @param z
-     *         Z
+     * @param pos
+     *         Nonnull
+     *         <p/>
+     *         position
      * @since 1.0
      */
-    boolean isHarvestable(World world, int x, int y, int z);
+    boolean isHarvestable(World world, BlockPos pos);
 
     /**
      * 収穫者がこの作物を収穫できるか判定します。
@@ -68,15 +65,13 @@ public interface ICrop{
      *         Nonnull
      *         <p/>
      *         the World
-     * @param x
-     *         X
-     * @param y
-     *         Y
-     * @param z
-     *         Z
+     * @param pos
+     *         Nonnull
+     *         <p/>
+     *         position
      * @since 1.0
      */
-    boolean canHarvestCrop(EntityPlayer player, World world, int x, int y, int z);
+    boolean canHarvestCrop(EntityPlayer player, World world, BlockPos pos);
 
     /**
      * 成長段階を一つ進めます。 それ以上成長できない場合、falseを返し何も行いません。
@@ -87,15 +82,13 @@ public interface ICrop{
      *         Nonnull
      *         <p/>
      *         the World
-     * @param x
-     *         X
-     * @param y
-     *         Y
-     * @param z
-     *         Z
+     * @param pos
+     *         Nonnull
+     *         <p/>
+     *         position
      * @since 1.0
      */
-    boolean grow(World world, int x, int y, int z);
+    boolean grow(World world, BlockPos pos);
 
     /**
      * 作物の種を返します。
@@ -106,15 +99,13 @@ public interface ICrop{
      *         Nonnull
      *         <p/>
      *         the World
-     * @param x
-     *         X
-     * @param y
-     *         Y
-     * @param z
-     *         Z
+     * @param pos
+     *         Nonnull
+     *         <p/>
+     *         position
      * @since 1.0
      */
-    ItemStack getSeed(World world, int x, int y, int z);
+    ItemStack getSeed(World world, BlockPos pos);
 
     /**
      * 期待されるすべての収穫物を返します。
@@ -125,15 +116,13 @@ public interface ICrop{
      *         Nonnull
      *         <p/>
      *         the World
-     * @param x
-     *         X
-     * @param y
-     *         Y
-     * @param z
-     *         Z
+     * @param pos
+     *         Nonnull
+     *         <p/>
+     *         position
      * @since 1.0
      */
-    ItemStack[] getAllExceptedResult(World world, int x, int y, int z);
+    ItemStack[] getAllExceptedResult(World world, BlockPos pos);
 
     /**
      * 収穫結果を返します。ドロップ処理等は行いません。
@@ -152,14 +141,12 @@ public interface ICrop{
      *         Nonnull
      *         <p/>
      *         the World
-     * @param x
-     *         X
-     * @param y
-     *         Y
-     * @param z
-     *         Z
+     * @param pos
+     *         Nonnull
+     *         <p/>
+     *         position
      * @since 1.0
      */
-    ItemStack[] harvest(EntityPlayer player, Random random, World world, int x, int y, int z);
+    ItemStack[] harvest(EntityPlayer player, Random random, World world, BlockPos pos);
 
 }
