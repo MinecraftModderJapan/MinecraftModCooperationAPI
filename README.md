@@ -1,6 +1,6 @@
 # Minecraft Mod Cooperation API
 本APIは食べ物や色といった各modで内容が共通しやすいInterfaceやEnumerationを定義し、modderに提供する事で、mod間の連携を容易にすることを目的とします。
-現在は、Minecraft1.8.9のMinecraftForge11.15.1.1722以上の環境で動作させることを想定してコーディングされています。
+現在は、Minecraft1.9のMinecraftForge12.16.0.1766以上の環境で動作させることを想定してコーディングされています。
 
 ## License
 LICENSEという名前のファイルを見てください。
@@ -12,7 +12,7 @@ Licenseはこのリポジトリに対してAdmin以上の権限を持ってい�
 
 # Minecraft Mod Cooperation API
 This API will be used to make your mods to work with other mods easily.
-Now work on Minecraft1.8.9 and upper MinecraftForge11.15.1.1722.
+Now work on Minecraft1.9 and upper MinecraftForge12.16.0.1766.
 
 ## License
 See the LICENSE file.
