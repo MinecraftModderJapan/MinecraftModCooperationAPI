@@ -1,4 +1,6 @@
 # Minecraft Mod Cooperation API
+
+[![Join the chat at https://gitter.im/MinecraftModderJapan/MinecraftModCooperationAPI](https://badges.gitter.im/MinecraftModderJapan/MinecraftModCooperationAPI.svg)](https://gitter.im/MinecraftModderJapan/MinecraftModCooperationAPI?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 本APIは食べ物や色といった各modで内容が共通しやすいInterfaceやEnumerationを定義し、modderに提供する事で、mod間の連携を容易にすることを目的とします。
 現在は、Minecraft1.7.10のMinecraftForge10.13.4.1558以上の環境で動作させることを想定してコーディングされています。
 
