@@ -136,9 +136,9 @@ public interface ICrop{
     ItemStack[] getAllExceptedResult(World world, int x, int y, int z);
 
     /**
-     * 収穫結果を返します。ドロップ処理等は行いません。
+     * EntityPlayerによる収穫処理を行い、収穫結果を返します。ドロップ処理等は行いません。
      * <p/>
-     * Return harvest-result items and do not any more.
+     * Execute harvesting by plyaer and return harvest-result items and do not any more.
      *
      * @param player
      *         Nonnull
@@ -161,5 +161,28 @@ public interface ICrop{
      * @since 1.0
      */
     ItemStack[] harvest(EntityPlayer player, Random random, World world, int x, int y, int z);
+
+    /**
+     * 収穫処理を行い、収穫結果を返します。ドロップ処理等は行いません。
+     * <p/>
+     * Execute harvesting and return harvest-result items and do not any more.
+     *
+     * @param random
+     *         Nonnull
+     *         <p/>
+     *         Randomize
+     * @param world
+     *         Nonnull
+     *         <p/>
+     *         the World
+     * @param x
+     *         X
+     * @param y
+     *         Y
+     * @param z
+     *         Z
+     * @since 1.1
+     */
+    ItemStack[] harvest(Random random, World world, int x, int y, int z);
 
 }
