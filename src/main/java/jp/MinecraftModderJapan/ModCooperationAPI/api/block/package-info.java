@@ -1,4 +1,4 @@
-@API(apiVersion = "1.0", owner = "jp.MinecraftModderJapan.ModCooperationAPI", provides = "jp.MinecraftModderJapan.ModCooperationAPI.api.block")
+@API(apiVersion = "1.1", owner = "jp.MinecraftModderJapan.ModCooperationAPI", provides = "jp.MinecraftModderJapan.ModCooperationAPI.api.block")
 package jp.MinecraftModderJapan.ModCooperationAPI.api.block;
 
-import cpw.mods.fml.common.API;
+import net.minecraftforge.fml.common.API;
