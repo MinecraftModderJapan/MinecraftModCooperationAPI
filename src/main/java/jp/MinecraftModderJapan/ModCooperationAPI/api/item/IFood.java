@@ -3,9 +3,11 @@ package jp.MinecraftModderJapan.ModCooperationAPI.api.item;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 
+import javax.annotation.Nonnull;
+
 /**
  * 食べ物のインターフェースです。
- * <p/>
+ * <br>
  * Food interface.
  *
  * @author CrafterKina
@@ -15,40 +17,34 @@ import net.minecraft.item.ItemStack;
 public interface IFood{
     /**
      * この食べ物を食べることによって、どのくらい満腹度が回復するか取得します。
-     * <p/>
+     * <br>
      * Get the Hunger Heal Amount of This Food.
      *
-     * @param stack
-     *         Nonnull
-     * @param entity
-     *         Nullable
+     * @param stack  eaten food stack
+     * @param entity eaten by
      * @since 1.0
      */
-    int getHungerHealAmount(ItemStack stack, EntityLivingBase entity);
+    int getHungerHealAmount(@Nonnull ItemStack stack, @Nonnull EntityLivingBase entity);
 
     /**
      * この食べ物を食べることによって、どのくらい隠し満腹度が回復するか取得します。
-     * <p/>
+     * <br>
      * Get the Hunger Saturation Heal Amount of This Food.
      *
-     * @param stack
-     *         Nonnull
-     * @param entity
-     *         Nullable
+     * @param stack  eaten food stack
+     * @param entity eaten by
      * @since 1.0
      */
-    float getHungerSaturationModifier(ItemStack stack, EntityLivingBase entity);
+    float getHungerSaturationModifier(@Nonnull ItemStack stack, @Nonnull EntityLivingBase entity);
 
     /**
      * 指定されたEntityがこの食べ物を食べられるのか判定します。
-     * <p/>
+     * <br>
      * Can entity eat this.
      *
-     * @param entity
-     *         Nonnull
-     * @param stack
-     *         Nonnull
+     * @param entity try to eat
+     * @param stack  try to be eaten
      * @since 1.0
      */
-    boolean canBeAteBy(EntityLivingBase entity, ItemStack stack);
+    boolean canBeAteBy(@Nonnull EntityLivingBase entity, @Nonnull ItemStack stack);
 }

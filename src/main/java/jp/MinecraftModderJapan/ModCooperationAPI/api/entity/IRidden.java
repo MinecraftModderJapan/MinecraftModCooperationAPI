@@ -2,6 +2,8 @@ package jp.MinecraftModderJapan.ModCooperationAPI.api.entity;
 
 import net.minecraft.entity.Entity;
 
+import javax.annotation.Nonnull;
+
 /**
  * 乗れるEntityのインターフェース。
  * <p/>
@@ -14,39 +16,36 @@ import net.minecraft.entity.Entity;
 public interface IRidden{
     /**
      * 乗る。
-     * <p/>
+     * <br>
      * ride.
      *
      * @param entity
-     *         Nonnull
-     *         <p/>
      *         to ride
      * @return success
      * @since 1.0
      */
-    boolean ride(Entity entity);
+    boolean ride(@Nonnull Entity entity);
 
 
     /**
      * 降ろす。
-     * <p/>
+     * <br>
      * unload.
      *
      * @param entity
-     *         Nonnull
-     *         <p/>
      *         to unload
      * @return success
      * @since 1.0
      */
-    boolean unload(Entity entity);
+    boolean unload(@Nonnull Entity entity);
 
     /**
      * 乗っているすべてのEntityを返す。
-     * <p/>
+     * <br>
      * All the riding on this.
      *
      * @since 1.0
      */
+    @Nonnull
     Entity[] getRiddenBy();
 }
