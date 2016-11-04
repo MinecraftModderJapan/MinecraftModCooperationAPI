@@ -2,7 +2,7 @@ package jp.MinecraftModderJapan.ModCooperationAPI.api.block;
 
 /**
  * 鉱石ブロックのインターフェースです。
- * <p/>
+ * <br>
  * Ore Block Interface.
  *
  * @author CrafterKina

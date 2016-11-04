@@ -2,9 +2,11 @@ package jp.MinecraftModderJapan.ModCooperationAPI.api.entity;
 
 import net.minecraft.item.ItemStack;
 
+import javax.annotation.Nonnull;
+
 /**
  * 繁殖可能なEntityのインターフェース
- * <p/>
+ * <br>
  * Breedable mobs interface.
  *
  * @author CrafterKina
@@ -14,11 +16,9 @@ import net.minecraft.item.ItemStack;
 public interface IBreedable{
     /**
      * @param stack
-     *         CheckForNull
-     *         <p/>
      *         the Item
      * @see net.minecraft.entity.passive.EntityAnimal#isBreedingItem(ItemStack) it is same.
      * @since 1.0
      */
-    boolean canBreedBy(ItemStack stack);
+    boolean canBreedBy(@Nonnull ItemStack stack);
 }
