@@ -1,6 +1,8 @@
 package jp.MinecraftModderJapan.ModCooperationAPI.api.entity;
 
 import net.minecraft.entity.Entity;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.CapabilityInject;
 
 import javax.annotation.Nonnull;
 
@@ -14,6 +16,9 @@ import javax.annotation.Nonnull;
  * @since 1.0
  */
 public interface IRidden{
+    @CapabilityInject(IRidden.class)
+    Capability<IRidden> CAPABILITY = null;
+
     /**
      * 乗る。
      * <br>

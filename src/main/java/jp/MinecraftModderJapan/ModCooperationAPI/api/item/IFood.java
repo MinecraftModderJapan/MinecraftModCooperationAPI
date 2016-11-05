@@ -2,6 +2,8 @@ package jp.MinecraftModderJapan.ModCooperationAPI.api.item;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.CapabilityInject;
 
 import javax.annotation.Nonnull;
 
@@ -15,6 +17,9 @@ import javax.annotation.Nonnull;
  * @since 1.0
  */
 public interface IFood{
+    @CapabilityInject(IFood.class)
+    Capability<IFood> CAPABILITY = null;
+
     /**
      * この食べ物を食べることによって、どのくらい満腹度が回復するか取得します。
      * <br>
