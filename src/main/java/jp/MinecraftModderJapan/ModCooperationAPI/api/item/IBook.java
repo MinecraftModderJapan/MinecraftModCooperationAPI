@@ -2,6 +2,8 @@ package jp.MinecraftModderJapan.ModCooperationAPI.api.item;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.CapabilityInject;
 
 import javax.annotation.Nonnull;
 
@@ -15,6 +17,8 @@ import javax.annotation.Nonnull;
  * @since 1.0
  */
 public interface IBook{
+    @CapabilityInject(IBook.class)
+    Capability<IBook> CAPABILITY = null;
 
     /**
      * GUIを持っているか。
