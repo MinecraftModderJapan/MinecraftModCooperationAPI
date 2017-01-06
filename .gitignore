@@ -259,3 +259,5 @@ tramp
 # cask packages
 .cask/
 
+/gradle.properties
+/build.gradle

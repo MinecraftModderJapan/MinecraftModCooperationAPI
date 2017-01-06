@@ -1,6 +1,10 @@
 package jp.MinecraftModderJapan.ModCooperationAPI.api.entity;
 
 import net.minecraft.entity.Entity;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.CapabilityInject;
+
+import javax.annotation.Nonnull;
 
 /**
  * 乗れるEntityのインターフェース。
@@ -12,41 +16,41 @@ import net.minecraft.entity.Entity;
  * @since 1.0
  */
 public interface IRidden{
+    @CapabilityInject(IRidden.class)
+    Capability<IRidden> CAPABILITY = null;
+
     /**
      * 乗る。
-     * <p/>
+     * <br>
      * ride.
      *
      * @param entity
-     *         Nonnull
-     *         <p/>
      *         to ride
      * @return success
      * @since 1.0
      */
-    boolean ride(Entity entity);
+    boolean ride(@Nonnull Entity entity);
 
 
     /**
      * 降ろす。
-     * <p/>
+     * <br>
      * unload.
      *
      * @param entity
-     *         Nonnull
-     *         <p/>
      *         to unload
      * @return success
      * @since 1.0
      */
-    boolean unload(Entity entity);
+    boolean unload(@Nonnull Entity entity);
 
     /**
      * 乗っているすべてのEntityを返す。
-     * <p/>
+     * <br>
      * All the riding on this.
      *
      * @since 1.0
      */
+    @Nonnull
     Entity[] getRiddenBy();
 }

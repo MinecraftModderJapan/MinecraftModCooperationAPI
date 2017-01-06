@@ -2,7 +2,7 @@ package jp.MinecraftModderJapan.ModCooperationAPI.api.block;
 
 /**
  * 着色可能Blockのインターフェースです。
- * <p/>
+ * <br>
  * Colorable Block Interface.
  *
  * @author CrafterKina

@@ -2,10 +2,14 @@ package jp.MinecraftModderJapan.ModCooperationAPI.api.item;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.CapabilityInject;
+
+import javax.annotation.Nonnull;
 
 /**
  * 本のためのインターフェイス。
- * <p/>
+ * <br>
  * Interface for the book.
  *
  * @author Shift02
@@ -13,54 +17,48 @@ import net.minecraft.item.ItemStack;
  * @since 1.0
  */
 public interface IBook{
+    @CapabilityInject(IBook.class)
+    Capability<IBook> CAPABILITY = null;
 
     /**
      * GUIを持っているか。
-     * <p/>
+     * <br>
      * the book has gui.
      *
      * @param book
-     *         Nonnull
-     *         <p/>
      *         Instance of the book stack.
      * @return 持っている場合はtrue If the book has, "true"
      * @since 1.0
      */
-    boolean hasGUI(ItemStack book);
+    boolean hasGUI(@Nonnull ItemStack book);
 
     /**
      * GUIを開けることができるか。
-     * <p/>
+     * <br>
      * player can open gui.
      *
      * @param player
-     *         Nonnull
-     *         <p/>
      *         the Player
      * @param book
-     *         Nonnull
-     *         <p/>
      *         Instance of the book stack.
      * @return 開くことができるならtrue。 If player can open gui, true.
      * @since 1.0
      */
-    boolean canOpenGUI(EntityPlayer player, ItemStack book);
+    boolean canOpenGUI(@Nonnull EntityPlayer player, @Nonnull ItemStack book);
 
     /**
      * GUIを開く。
-     * <p/>
+     * <br>
      * Open the GUI.
      *
      * @param player
-     *         Nonnull
-     *         <p/>
      *         the Player
      * @param book
-     *         Nonnull
-     *         <p/>
      *         Instance of the book stack.
+     * @return opened book stack
      * @since 1.0
      */
-    ItemStack openGUI(EntityPlayer player, ItemStack book);
+    @Nonnull
+    ItemStack openGUI(@Nonnull EntityPlayer player, @Nonnull ItemStack book);
 
 }
